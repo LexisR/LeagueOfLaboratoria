@@ -149,6 +149,7 @@ function miOtraFunction() {
 function facebookLogin() {
     var provider = new firebase.auth.FacebookAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function(result) {
+        //provider puede ser cualquier metodo de identificacion
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         var token = result.credential.accessToken;
         // The signed-in user info.
